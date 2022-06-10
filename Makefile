@@ -1,27 +1,17 @@
-﻿# Copyright 2020-2021 Rafał Wabik - IceG - From eko.one.pl forum
-# Licensed to the GNU General Public License v3.0.
+#
+# Copyright (C) 2020 gSpot (https://github.com/gSpotx2f/luci-app-interfaces-statistics)
+#
+# This is free software, licensed under the MIT License.
+#
 
 include $(TOPDIR)/rules.mk
 
-PKG_NAME:=luci-app-tn-netports (modded)
-LUCI_TITLE:=Network ports status LuCI application
+PKG_VERSION:=0.4-4
+LUCI_TITLE:=Network interfaces netports
 LUCI_PKGARCH:=all
-LUCI_DEPENDS:=+luabitop
+PKG_LICENSE:=MIT
 
-define Package/luci-app-tn-netports/postinst
-#!/bin/sh
-rm -rf /tmp/luci-indexcache
-rm -rf /tmp/luci-modulecache/
-exit 0
-endef
-
-define Package/$(PKG_NAME)/config
-# shown in make menuconfig <Help>
-help
-	$(LUCI_TITLE)
-	Version: $(PKG_VERSION)-$(PKG_RELEASE)
-endef
-
+#include ../../luci.mk
 include $(TOPDIR)/feeds/luci/luci.mk
 
 # call BuildPackage - OpenWrt buildroot signature
