@@ -1,3 +1,6 @@
 *.po~
 *.tar.gz
 *.zip
+configurationCache.log
+settings.json
+targets.log
