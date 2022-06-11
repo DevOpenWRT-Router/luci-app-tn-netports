@@ -10,6 +10,7 @@ PKG_VERSION:=0.4-4
 LUCI_TITLE:=Network interfaces netports
 LUCI_PKGARCH:=all
 PKG_LICENSE:=MIT
+DEPENDS:=+luci-base +luabitop
 
 #include ../../luci.mk
 include $(TOPDIR)/feeds/luci/luci.mk
