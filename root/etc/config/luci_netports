@@ -36,6 +36,14 @@ config port
 	option type 'wifi'
 
 config port
+	option ifname 'usb0'
+	option type 'usb_rndis'
+
+config port
+	option ifname 'usb1'
+	option type 'usb_rndis'
+
+config port
 	option ifname 'tun0'
 	option name 'VPN_NAS'
 	option type 'vpn'
